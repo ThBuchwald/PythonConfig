@@ -90,6 +90,8 @@ Now, to setup a base Anaconda environment with some important Python packages, s
 
 Anaconda will ask you to confirm by entering `y`.
 
+If you open the Bash terminal as a normal user, and `conda --version` and/or `python --version` gets you an error, you will have to include the PATH to Anaconda again as shown above -- this time it will be for the standard (non-admin) user.
+
 If all went well:
 Congratulations, you're done!
 
