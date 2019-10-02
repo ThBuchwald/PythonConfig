@@ -1,6 +1,7 @@
 # PythonConfig
 This is simply a README to guide through the installation of a proper Python environment for work in a scientific background **in Windows 10**. Please be careful not to wreck your system; this text has not been written by an experienced user...*
-The guide aims at the first-time user that has not heard much about any of the programs found below. For example: if you know your way around Anaconda, this is not for you; if you instantly recognize Atom as a bad choice, definitely not for you.
+
+This guide aims at the first-time user that has not heard much about any of the programs found below. For example: if you know your way around Anaconda, this is not for you; if you instantly recognize Atom as a bad choice, definitely not for you.
 
 *I actually wrote the first version after I had only used Git, Python, Anaconda, and such for two weeks.
 
