@@ -44,7 +44,7 @@ As normal user, enter some commands. In each case, the dollar symbol `$` signifi
 * `$ git config --global user.email "<your-email-address>"`
 * `$ git config --global color.ui auto`
 * `$ git config --global merge.conflictstyle diff3`
-* `$ git config --global core.editor "atom --wait`
+* `$ git config --global core.editor "atom --wait"`
 * `$ git config --list` This will give you an overview of the saved settings. All of the above should be found there.
 
 **Pro-Tip**: Use the arrow keys to navigate through a history of commands you entered in the current terminal session. This will save you a lot of typing.
