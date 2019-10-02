@@ -62,19 +62,31 @@ Make sure that you _add to PATH_! This is not recommended by the set-up. However
 First, get the path to the Anaconda folder. If installed for all users, this would be something like `/c/ProgramData/Anaconda3`.
 
 Open Git Bash, **this time as admin**.  If the PATH was set correctly during installation, `$ conda --version` will print a version number, e.g. `conda 4.7.12`. If this is not the case, you need to set the path to the Anaconda install directory:
+
 `$ cd`
+
 `$ echo 'export PATH="$PATH:[YOUR_PATH]:[YOUR_PATH]/Scripts"' >> .bashrc`
+
 `$ echo 'alias python="winpty python.exe"' >> .bashrc`
+
 `$ source .bashrc`
+
 After this, it should give you the version number. 
+
 You can also check for working Python like this:
+
 `$ python --version`
+
 `$ python`
+
 `$ exit()` + `Enter`
 
 Now, to setup a base Anaconda environment with some important Python packages, simply type:
+
 `$ conda update --all`
+
 `$ conda install numpy pandas matplotlib jupyterlab`
+
 Anaconda will ask you to confirm by entering `y`.
 
 If all went well:
