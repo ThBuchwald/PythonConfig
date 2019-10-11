@@ -13076,7 +13076,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import required libraries</span>
@@ -13089,6 +13089,14 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note the time required to load the file into memory. Once it has been loaded, however, the NumPy arrays behave as fast as usual.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13114,7 +13122,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Wall time: 8.88 s
+<pre>Wall time: 8.06 s
 &lt;class &#39;nptdms.tdms.TdmsFile&#39;&gt;
 </pre>
 </div>
@@ -13126,7 +13134,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span> scale_channel = tdms_file.object(&quot;Rohdaten&quot;,&quot;Masse_Konzentrat&quot;)
@@ -13159,11 +13167,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scale_data</span> <span class="o">=</span> <span class="n">scale_channel</span><span class="o">.</span><span class="n">data</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">scale_data</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The channel has&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">scale_data</span><span class="p">),</span> <span class="s2">&quot;rows.&quot;</span><span class="p">)</span>
 
 <span class="n">time_data</span> <span class="o">=</span> <span class="n">scale_channel</span><span class="o">.</span><span class="n">time_track</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">time_data</span><span class="p">))</span>
@@ -13184,9 +13193,185 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;numpy.ndarray&#39;&gt;
+The channel has 1473740 rows.
 &lt;class &#39;numpy.ndarray&#39;&gt;
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># iterate over all items in the properties dictionary and print them</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">scale_channel</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">: </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>unit_string: kg
+maximum: 119.43547877291446
+minimum: 45.77417940776836
+datatype: DT_DOUBLE
+description: 
+Bearbeiter_Software: Ralf Schünemann
+displaytype: Numeric
+Filter_Flaeche_in_cm2: 79.0
+Filter_Hersteller: Spörl
+Filter_Material: Drahtgewebe
+Filter_Nummer: 1
+Filter_Porengeroeße_in_um: 10.0
+Filter_Typ: keine
+Filter_Versuchsanzahl: 1
+Filter_Werkstoff: Edelstahl 1.4404
+FS_Dichte: 2.76
+FS_Feststoff: Dolomit
+FS_Feststoff_cV: 32.93699153519318
+FS_Masse: 100.0
+Kanalname: Masse_Konzentrat
+KM_Dichte_bei_20C: 1.0
+KM_kontinuierliches_Medium: Wasser
+KM_Masse: 1100000.0
+KM_Viskositaet: 1.0
+Kommentar_nach_Messung: 18.7°C
+Kommentar_zur_Messung: 18.1°C
+monotony: not monotone
+NI_ChannelName: Masse_Konzentrat
+NI_UnitDescription: kg
+novaluekey: No
+Publikation: 
+Scale_ai_type: AI-Spannung
+Scale_Benutzerdef_Skalenname: RSF_Masse_Konzentrat
+Scale_device_name: cDAQ9188-RSFMod1
+Scale_input_terminal_configuration: Differential
+Scale_maximum_value: 250,00 kg
+Scale_minimum_value: 0,00 kg
+Scale_Nullabgleich: False
+Scale_physical_channel: ai4
+Scale_Skalierte_Einheit: kg
+Scale_Steigung: 25
+Scale_units: From Custom Scale
+Scale_Unskalierte_Einheit: Volt
+Scale_Unskalierte_Einheit_max: 10
+Scale_Unskalierte_Einheit_min: 0
+Scale_y_Achsenabschnitt: 0
+Scale_y_Achsenabschnitt_konst: 0
+Sensor_Anschluss_an_Datenerfassung: NI9205 differenziell AI 4 - AI 12
+Sensor_Einheit: kg
+Sensor_Hersteller: Hottinger Baldwin Messtechnik GmbH
+Sensor_Linearitaet: 0.0166 %FS
+Sensor_Messbereichsanfang: 0 kg
+Sensor_Messbereichsende: 250 kg
+Sensor_Messverstaerker_Ausgang: 0…10 V
+Sensor_Messverstaerkerhersteller: Hottinger Baldwin Messtechnik GmbH
+Sensor_Messverstaerkertyp: MVD2555
+Sensor_Mindestteilungswert: 100 g
+Sensor_Modellnummer: 1-PW10AC3/250kg-1
+Sensor_Nennkennwert_Cn: 2.0 + 0.2 mV/V
+Sensor_Nennmessbereich: 0…250 kg
+Sensor_Nullwerttoleranz: 0.1 mV/V
+Sensor_Relative_Umkehrspanne: 0.0166 %FS
+Sensor_Seriennummer: 02338228
+Sensor_Speisespannung: 1…12 V
+Sensor_Teilungswerte_max: 3000
+Sensor_Temperaturkoeffizient_TK_Kennwert: 0.0175 %FS
+Sensor_Temperaturkoeffizient_TK_Nullpunkt: 0.0140 %FS
+Sensor_Temperaturstabilitaet: -10…40°C
+Sensor_Typ: PW10AC3 Plattform-Wägezelle
+Sensor_Widerstand: 300…500
+VAR_ende_nach: Filtrieren
+VAR_gi_magnete_true_in_mm: 97.5
+VAR_gi_spuelstossweg_in_mm: 9.0
+VAR_laufzeit: 1
+VAR_n_zyklen: 0
+VAR_p_eigenenergie_in_bar: 0.0
+VAR_p_max_in_bar: 0.4
+VAR_p_rueckstoss_in_bar: 0.5
+VAR_pid_pconst_kc: 0.95
+VAR_pid_pconst_td_in_min: 0.0
+VAR_pid_pconst_ti_in_min: 0.08
+VAR_pid_vconst_kc: 0.95
+VAR_pid_vconst_td_in_min: 0.0
+VAR_pid_vconst_ti_in_min: 0.08
+VAR_spuelen_modus: Spülen
+VAR_t_entspannen_in_s: 2.0
+VAR_t_filtration_in_s: 45.0
+VAR_t_spuelen_in_s: 8.0
+VAR_t_vorspannen_vd6: 2.0
+VAR_zyklenzahl: 0
+Versuch_Apparatur: RSF
+Versuch_Berarbeiter: Narendra Muddana
+Versuch_Nummer: DT028
+Versuch_Ort: Technikum-MVTAT
+Versuch_Projekt__Auftrag: IGF 18528 BR
+Versuch_Reihe: perfect!
+Versuch_Startdatum: 26.09.2019
+Versuch_Stoppzeit: 2019-09-26 12:27:03.465232+00:00
+Versuch_Zyklen_Anzahl: 121
+wf_increment: 0.005
+wf_samples: 1473740
+wf_start_offset: 0.0
+wf_start_time: 2019-09-26 10:24:11.970320+00:00
+wf_time_pref: relative
+wf_xname: NoName
+wf_xunit_string: 
+Zielstellung_der_Messung: Filteration_test_ spörl|_2mm(1mm)||CM2 FV18 030 80/BM15||0.85mm||(2mm(1mm)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get a single property value</span>
+<span class="n">property_value</span> <span class="o">=</span> <span class="n">scale_channel</span><span class="o">.</span><span class="n">property</span><span class="p">(</span><span class="s2">&quot;unit_string&quot;</span><span class="p">)</span>
+
+<span class="n">property_value</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;kg&#39;</pre>
+</div>
+
 </div>
 
 </div>
