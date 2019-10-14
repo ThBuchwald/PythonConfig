@@ -5,6 +5,8 @@ This guide aims at the first-time user that has not heard much about any of the 
 
 *I actually wrote the first version after I had only used Git, Python, Anaconda, and such for two weeks.
 
+Additional information for specific topics may be found in subfolders. They contain their own description and are not described here.
+
 ## Installation Procedure
 Please follow the installation procedure strictly in the [sequence](https://wiki.lesswrong.com/wiki/Sequences) shown below.
 
