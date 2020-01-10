@@ -10,7 +10,7 @@ Anaconda is the package management system for data science-related development a
 
 These require you to have a functioning, i.e. initialized and activated, Conda (see main ReadMe). They are all taken from the [Anaconda doc](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands).
 
-`conda version`: gives you the version number of the current installation
+`conda --version`: gives you the version number of the current installation
 
 `conda update --all`: updates all installed packages
 
