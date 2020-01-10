@@ -60,3 +60,7 @@ An environment with a working Python 2.7 is recommended for cases where you find
 ### Machine Learning Base
 
 `conda create -n MachineLearning pandas scipy matplotlib jupyterlab scikit-learn`
+
+### Excel IO
+
+`conda create -n ExcelIO pandas scipy jupyterlab openpyxl xlsxwriter`
