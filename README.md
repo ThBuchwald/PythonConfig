@@ -94,6 +94,16 @@ Anaconda will ask you to confirm by entering `y`.
 
 If you open the Bash terminal as a normal user, and `conda --version` and/or `python --version` gets you an error, you will have to include the PATH to Anaconda again as shown above -- this time it will be for the standard (non-admin) user.
 
+You may have to initialize Anaconda for use with the Git Bash console. In this case, type:
+
+`$ conda init bash`
+
+Afterwards you have to close the console (`exit`), restart and type:
+
+`$ conda activate`
+
+Now the name of your active environment (probably *base*) should appear above the command prompt.
+
 If all went well:
 Congratulations, you're done!
 
