@@ -128,7 +128,7 @@ This environment contains all the packages you can use to be a hell of a lot mor
 
    There are many more, just browse through the collection.
 
-   ![nbextensions](M:\Git_Projects\Install_Instructions\Anaconda\nbextensions.PNG)
+   ![nbextensions](\nbextensions.PNG)
 
 4. plotting tools:
 
