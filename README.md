@@ -53,6 +53,8 @@ As normal user, enter some commands. In each case, the dollar symbol `$` signifi
 
 Don't manually exit the terminal, instead type `$ exit` and press `Enter`.  
 
+_Style Tip:_ Change the background color to (40 43 51) to achieve the same as the default Atom theme.
+
 ### 4) install Anaconda
 
 Instead of installing Python manually, Anaconda (https://www.anaconda.com/) brings all of the most important Python packages for data science. This will be your default Python installation.
