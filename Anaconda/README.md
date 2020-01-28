@@ -150,6 +150,14 @@ This environment contains all the packages you can use to be a hell of a lot mor
 
    `conda install -n Productivity -c conda-forge jupyterthemes  `
 
+### TDMS Environment
+
+The `nptdms` package reads data from `.tdms`-files.
+
+`conda create --name TDMS --clone Productivity`
+
+`conda install -c conda-forge nptdms`
+
 ### Others
 
 When you found a working tool for an application, build a new environment from the packages that you found suitable.
